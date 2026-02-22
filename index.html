@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,12 +33,222 @@
     <style>
       * {
         font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
       }
     </style>
   </head>
   <body>
-    <section>
-      <h2>Job Application Tracker</h2>
+    <!-- heading section -->
+    <section class="container mx-auto">
+      <h2 class="text-[#323b49] text-xl font-bold mt-10 mb-5">
+        Job Application Tracker
+      </h2>
+      <div
+        class="grid grid-cols-3 gap-5 md:w-11/12 border-b-2 border-gray-100 pb-6"
+      >
+        <div class="border-2 border-gray-100 p-3 rounded-md">
+          <h4>Total</h4>
+          <p id="total-jobs">0</p>
+        </div>
+        <div class="border-2 border-gray-100 p-3 rounded-md">
+          <h4>Interview</h4>
+          <p>0</p>
+        </div>
+        <div class="border-2 border-gray-100 p-3 rounded-md">
+          <h4>Rejected</h4>
+          <p>0</p>
+        </div>
+      </div>
     </section>
+
+    <section class="container mx-auto mt-5">
+      <div class="w-11/12 flex justify-between">
+        <div>
+          <h3 class="font-semibold mb-4">Available Jobs</h3>
+
+          <div class="mb-5">
+            <button id="all" class="btn btn-primary btn-soft pr-10">
+              <p>All</p>
+            </button>
+            <button
+              id="interview"
+              onclick="showOnly('interview')"
+              class="btn btn-primary btn-soft"
+            >
+              <p>Interview</p>
+            </button>
+            <button
+              id="rejected"
+              onclick="showOnly('rejected')"
+              class="btn btn-primary btn-soft"
+            >
+              <p>Rejected</p>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <p id="job-count">8 jobs</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- interview tab  -->
+    <section class="container mx-auto hidden">
+      <div
+        class="w-11/12 p-50 flex flex-col items-center border border-gray-200"
+      >
+        <img src="./images/jobs.png" alt="" />
+        <h3>No jobs available</h3>
+        <p>Check back soon for new job opportunites</p>
+      </div>
+    </section>
+    <br />
+
+    <!-- rejected tab  -->
+    <section class="container mx-auto hidden">
+      <div
+        class="w-11/12 p-50 flex flex-col items-center border border-gray-200"
+      >
+        <img src="./images/jobs.png" alt="" />
+        <h3>No jobs available</h3>
+        <p>Check back soon for new job opportunites</p>
+      </div>
+    </section>
+    <br />
+
+    <!-- job posting part  -->
+
+    <section id="job-board" class="container mx-auto space-y-5">
+      <!-- card 1  -->
+      <div
+        class="card1 border border-gray-200 p-5 w-11/12 flex justify-between"
+      >
+        <div class="card-left">
+          <h3>Mobile First Corp</h3>
+          <p class="job-title">React Native Developer</p>
+
+          Remote . Full-time . $13000 - $175000
+          <br />
+          <button>NOT APPLIED</button>
+          <p class="mb-5">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </p>
+
+          <button class="btn btn-outline btn-success mr-3">INTERVIEW</button>
+          <button class="btn btn-outline btn-error">REJECTED</button>
+        </div>
+
+        <div class="card-right">
+          <span id="delete"><i class="fa-regular fa-trash-can"></i></span>
+        </div>
+      </div>
+      <!-- card 2  -->
+      <div
+        class="card2 border border-gray-200 p-5 w-11/12 flex justify-between"
+      >
+        <div class="card-left">
+          <h3>Mobile First Corp</h3>
+          <p class="job-title">React Native Developer</p>
+
+          Remote . Full-time . $13000 - $175000
+          <br />
+          <button>NOT APPLIED</button>
+          <p class="mb-5">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </p>
+
+          <button class="btn btn-outline btn-success mr-3">INTERVIEW</button>
+          <button class="btn btn-outline btn-error">REJECTED</button>
+        </div>
+
+        <div class="card-right">
+          <span><i class="fa-regular fa-trash-can"></i></span>
+        </div>
+      </div>
+
+      <!-- card-3 -->
+
+      <div
+        class="card3 border border-gray-200 p-5 w-11/12 flex justify-between"
+      >
+        <div class="card-left">
+          <h3>Mobile First Corp</h3>
+          <p class="job-title">React Native Developer</p>
+
+          Remote . Full-time . $13000 - $175000
+          <br />
+          <button>NOT APPLIED</button>
+          <p class="mb-5">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </p>
+
+          <button class="btn btn-outline btn-success mr-3">INTERVIEW</button>
+          <button class="btn btn-outline btn-error">REJECTED</button>
+        </div>
+
+        <div class="card-right">
+          <span><i class="fa-regular fa-trash-can"></i></span>
+        </div>
+      </div>
+
+      <!-- card 4  -->
+      <div
+        class="card2 border border-gray-200 p-5 w-11/12 flex justify-between"
+      >
+        <div class="card-left">
+          <h3>Mobile First Corp</h3>
+          <p class="job-title">React Native Developer</p>
+
+          Remote . Full-time . $13000 - $175000
+          <br />
+          <button>NOT APPLIED</button>
+          <p class="mb-5">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </p>
+
+          <button class="btn btn-outline btn-success mr-3">INTERVIEW</button>
+          <button class="btn btn-outline btn-error">REJECTED</button>
+        </div>
+
+        <div class="card-right">
+          <span><i class="fa-regular fa-trash-can"></i></span>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let jobs = document.getElementsByClassName("job-title");
+
+      // for (let i of jobs) {
+      //   console.log(i.innerText);
+      // }
+
+      // show total jobs
+      let totalJobs = document.getElementById("total-jobs");
+      totalJobs.innerText = jobs.length;
+
+      let jobCount = document.getElementById("job-count");
+      jobCount.innerText = `${jobs.length} jobs`;
+
+      // delete job
+
+      // 1-get parent container
+      // let jobBoard = document.getElementById("job-board");
+      // let job1 = document.getElementById("card1");
+
+      // document.getElementById("delete").addEventListener("click", function (e) {
+      //   // e.target.parentNode.removeChild(e.target);
+      //   let card = e.target.closest(".card");
+      //   card.remove();
+      //   totalJobs.innerText = jobs.length--;
+      // });
+    </script>
+
+    <script src="./script/index.js"></script>
   </body>
 </html>
