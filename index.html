@@ -35,6 +35,10 @@
         font-family: "Inter", sans-serif;
         background-color: #f8fafc;
       }
+
+      .hidden {
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -67,18 +71,19 @@
           <h3 class="font-semibold mb-4">Available Jobs</h3>
 
           <div class="mb-5">
-            <button id="all" class="btn btn-primary btn-soft pr-10">
+            <button
+              onclick="showOnly('job-board')"
+              class="btn btn-primary btn-soft pr-10"
+            >
               <p>All</p>
             </button>
             <button
-              id="interview"
               onclick="showOnly('interview')"
               class="btn btn-primary btn-soft"
             >
               <p>Interview</p>
             </button>
             <button
-              id="rejected"
               onclick="showOnly('rejected')"
               class="btn btn-primary btn-soft"
             >
@@ -88,34 +93,10 @@
         </div>
 
         <div>
-          <p id="job-count">8 jobs</p>
+          <p id="job-count"></p>
         </div>
       </div>
     </section>
-
-    <!-- interview tab  -->
-    <section class="container mx-auto hidden">
-      <div
-        class="w-11/12 p-50 flex flex-col items-center border border-gray-200"
-      >
-        <img src="./images/jobs.png" alt="" />
-        <h3>No jobs available</h3>
-        <p>Check back soon for new job opportunites</p>
-      </div>
-    </section>
-    <br />
-
-    <!-- rejected tab  -->
-    <section class="container mx-auto hidden">
-      <div
-        class="w-11/12 p-50 flex flex-col items-center border border-gray-200"
-      >
-        <img src="./images/jobs.png" alt="" />
-        <h3>No jobs available</h3>
-        <p>Check back soon for new job opportunites</p>
-      </div>
-    </section>
-    <br />
 
     <!-- job posting part  -->
 
@@ -219,7 +200,81 @@
           <span><i class="fa-regular fa-trash-can"></i></span>
         </div>
       </div>
+
+      <!-- card 5  -->
+      <div
+        class="card2 border border-gray-200 p-5 w-11/12 flex justify-between"
+      >
+        <div class="card-left">
+          <h3>Mobile First Corp</h3>
+          <p class="job-title">React Native Developer</p>
+
+          Remote . Full-time . $13000 - $175000
+          <br />
+          <button>NOT APPLIED</button>
+          <p class="mb-5">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </p>
+
+          <button class="btn btn-outline btn-success mr-3">INTERVIEW</button>
+          <button class="btn btn-outline btn-error">REJECTED</button>
+        </div>
+
+        <div class="card-right">
+          <span><i class="fa-regular fa-trash-can"></i></span>
+        </div>
+      </div>
+
+      <!-- card 6  -->
+      <div
+        class="card2 border border-gray-200 p-5 w-11/12 flex justify-between"
+      >
+        <div class="card-left">
+          <h3>Mobile First Corp</h3>
+          <p class="job-title">React Native Developer</p>
+
+          Remote . Full-time . $13000 - $175000
+          <br />
+          <button>NOT APPLIED</button>
+          <p class="mb-5">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </p>
+
+          <button class="btn btn-outline btn-success mr-3">INTERVIEW</button>
+          <button class="btn btn-outline btn-error">REJECTED</button>
+        </div>
+
+        <div class="card-right">
+          <span><i class="fa-regular fa-trash-can"></i></span>
+        </div>
+      </div>
     </section>
+
+    <!-- interview tab  -->
+    <section id="interview" class="container mx-auto hidden">
+      <div
+        class="w-11/12 p-50 flex flex-col items-center border border-gray-200"
+      >
+        <img src="./images/jobs.png" alt="" />
+        <h3>No jobs available</h3>
+        <p>Check back soon for new job opportunites</p>
+      </div>
+    </section>
+    <br />
+
+    <!-- rejected tab  -->
+    <section id="rejected" class="container mx-auto hidden">
+      <div
+        class="w-11/12 p-50 flex flex-col items-center border border-gray-200"
+      >
+        <img src="./images/jobs.png" alt="" />
+        <h3>No jobs available</h3>
+        <p>Check back soon for new job opportunites</p>
+      </div>
+    </section>
+    <br />
 
     <script>
       let jobs = document.getElementsByClassName("job-title");

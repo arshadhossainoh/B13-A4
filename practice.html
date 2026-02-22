@@ -4,22 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
   </head>
   <body>
-    <ul class="language">
-      <li>Javascript</li>
-    </ul>
+    <div id="header">Header text</div>
+    <!-- <p class="text hidden">Paragraph 1</p> -->
+    <p class="text">Paragraph 1</p>
+    <p class="text">Paragraph 2</p>
+    <button id="handle">Handle</button>
+
+    <!-- we will fill up this container by js  -->
+    <div id="container"></div>
 
     <script>
-      function addLanguage(name) {
-        const li = document.createElement("li");
-        li.appendChild(document.createTextNode(name));
-        document.querySelector(".language").appendChild(li);
-      }
+      let para = document.querySelectorAll(".text");
+      // console.log((para[0].innerText = "ok"));
 
-      addLanguage("python");
-      addLanguage("java");
-      addLanguage("python");
+      //we are hidding para 1
+      // para[0].classList.add("hidden");
+
+      //removing hidden class
+      // para[0].classList.remove("hidden");
+
+      let btn = document.getElementById("handle");
+      btn.addEventListener("click", function () {
+        //hiding para 1 upon clicking
+        para[0].classList.add("hidden");
+      });
+
+      // filling up the container in html via js
+      let container = document.getElementById("container");
+
+      // creating div
+      let div = document.createElement("div");
+
+      // populating div
+      div.innerHTML = `<p>This is a paragraph via JS</p>
+      <button> Click</button>`;
+
+      // appendign child
+      container.appendChild(div);
     </script>
   </body>
 </html>
