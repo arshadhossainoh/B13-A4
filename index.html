@@ -56,11 +56,11 @@
         </div>
         <div class="border-2 border-gray-100 p-3 rounded-md">
           <h4>Interview</h4>
-          <p>0</p>
+          <p id="interview-count">0</p>
         </div>
         <div class="border-2 border-gray-100 p-3 rounded-md">
           <h4>Rejected</h4>
-          <p>0</p>
+          <p id="rejected count">0</p>
         </div>
       </div>
     </section>
@@ -103,6 +103,7 @@
     <section id="job-board" class="container mx-auto space-y-5">
       <!-- card 1  -->
       <div
+        id="card1"
         class="card1 border border-gray-200 p-5 w-11/12 flex justify-between"
       >
         <div class="card-left">
@@ -117,12 +118,18 @@
             products used by millions of users worldwide.
           </p>
 
-          <button class="btn btn-outline btn-success mr-3">INTERVIEW</button>
-          <button class="btn btn-outline btn-error">REJECTED</button>
+          <button id="interview-btn" class="btn btn-outline btn-success mr-3">
+            INTERVIEW
+          </button>
+          <button id="rejected-btn" class="btn btn-outline btn-error">
+            REJECTED
+          </button>
         </div>
 
         <div class="card-right">
-          <span id="delete"><i class="fa-regular fa-trash-can"></i></span>
+          <span id="del" onclick="deleteJob('card1')"
+            ><i class="fa-regular fa-trash-can"></i
+          ></span>
         </div>
       </div>
       <!-- card 2  -->
@@ -290,7 +297,14 @@
       let jobCount = document.getElementById("job-count");
       jobCount.innerText = `${jobs.length} jobs`;
 
+      // interview btn
+
       // delete job
+      // const deleteBtn = document
+      //   .getElementById("del")
+      //   .addEventListener("click", function () {
+      //     console.log("btn clicked");
+      //   });
 
       // 1-get parent container
       // let jobBoard = document.getElementById("job-board");
