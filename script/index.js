@@ -18,15 +18,13 @@ function showOnly(id) {
 // delete job posting
 function deleteJob(id) {
   // const jobBoard = document.getElementById("job-board");
-  // const delteteBtn = document.getElementById("del");
 
-  // const selected = document.getElementById(id);
   // id.parentNode.removeChild(selected);
-
   // const childElement = document.getElementById(id);
   // childElement.parentNode.removeChild(childElement);
   let jobPost = document.getElementById(id);
   jobPost.innerHTML = "";
+  jobPost.style.border = "none";
   totalJobs.innerText = jobs.length--;
   jobCount.innerText = `${jobs.length} jobs`;
 }
@@ -35,3 +33,13 @@ function deleteJob(id) {
 // delteteBtn.addEventListener("click", function () {
 //   console.log("btn clicked");
 // });
+
+function addToInterview(id) {
+  let jobPost = document.getElementById(id);
+  let interviewSection = document.getElementById("interview");
+  console.log(jobPost);
+
+  interviewSection.innerHTML = `${jobPost.innerHTML} `;
+
+  // interviewSection.innerHTML = `<p>${jobPost.innerHTML}</p>`;
+}

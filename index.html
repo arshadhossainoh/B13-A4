@@ -109,16 +109,21 @@
         <div class="card-left">
           <h3>Mobile First Corp</h3>
           <p class="job-title">React Native Developer</p>
-
-          Remote . Full-time . $13000 - $175000
           <br />
-          <button>NOT APPLIED</button>
+          <p>Remote . Full-time . $13000 - $175000</p>
+
+          <br />
+          <button class="border border-gray-300 p-1">NOT APPLIED</button>
           <p class="mb-5">
             Build cross-platform mobile applications using React Native. Work on
             products used by millions of users worldwide.
           </p>
 
-          <button id="interview-btn" class="btn btn-outline btn-success mr-3">
+          <button
+            id="interview-btn"
+            class="btn btn-outline btn-success mr-3 interview-btn"
+            onclick="addToInterview('card1')"
+          >
             INTERVIEW
           </button>
           <button id="rejected-btn" class="btn btn-outline btn-error">
@@ -127,51 +132,62 @@
         </div>
 
         <div class="card-right">
-          <span id="del" onclick="deleteJob('card1')"
+          <span class="del" id="del" onclick="deleteJob('card1')"
             ><i class="fa-regular fa-trash-can"></i
           ></span>
         </div>
       </div>
       <!-- card 2  -->
       <div
+        id="card2"
         class="card2 border border-gray-200 p-5 w-11/12 flex justify-between"
       >
         <div class="card-left">
-          <h3>Mobile First Corp</h3>
-          <p class="job-title">React Native Developer</p>
-
-          Remote . Full-time . $13000 - $175000
+          <h3>WebFlow Agency</h3>
+          <p class="job-title">Web Designer & Developer</p>
           <br />
-          <button>NOT APPLIED</button>
+          <p>Los Angeles, CA • Part-time • $80,000 - $120,000</p>
+
+          <br />
+          <button class="border border-gray-300 p-1">NOT APPLIED</button>
           <p class="mb-5">
-            Build cross-platform mobile applications using React Native. Work on
-            products used by millions of users worldwide.
+            Create stunning web experiences for high-profile clients. Must have
+            portfolio and experience with modern web design trends.
           </p>
 
-          <button class="btn btn-outline btn-success mr-3">INTERVIEW</button>
+          <button
+            class="btn btn-outline btn-success mr-3 interview-btn"
+            onclick="addToInterview('card2')"
+          >
+            INTERVIEW
+          </button>
           <button class="btn btn-outline btn-error">REJECTED</button>
         </div>
 
         <div class="card-right">
-          <span><i class="fa-regular fa-trash-can"></i></span>
+          <span class="del" onclick="deleteJob('card2')"
+            ><i class="fa-regular fa-trash-can"></i
+          ></span>
         </div>
       </div>
 
       <!-- card-3 -->
 
       <div
+        id="card3"
         class="card3 border border-gray-200 p-5 w-11/12 flex justify-between"
       >
         <div class="card-left">
-          <h3>Mobile First Corp</h3>
-          <p class="job-title">React Native Developer</p>
-
-          Remote . Full-time . $13000 - $175000
+          <h3>DataViz Solutions</h3>
+          <p class="job-title">Data Visualization Specialist</p>
           <br />
-          <button>NOT APPLIED</button>
+
+          <p>Boston, MA • Full-time • $125,000 - $165,000</p>
+          <br />
+          <button class="border border-gray-300 p-1">NOT APPLIED</button>
           <p class="mb-5">
-            Build cross-platform mobile applications using React Native. Work on
-            products used by millions of users worldwide.
+            Transform complex data into compelling visualizations. Required
+            skills: D3.js, React, and strong analytical thinking. .
           </p>
 
           <button class="btn btn-outline btn-success mr-3">INTERVIEW</button>
@@ -179,21 +195,22 @@
         </div>
 
         <div class="card-right">
-          <span><i class="fa-regular fa-trash-can"></i></span>
+          <span onclick="deleteJob('card3')"><i class="fa-regular fa-trash-can"></i></span>
         </div>
       </div>
 
       <!-- card 4  -->
       <div
+        id="card4"
         class="card2 border border-gray-200 p-5 w-11/12 flex justify-between"
       >
         <div class="card-left">
-          <h3>Mobile First Corp</h3>
-          <p class="job-title">React Native Developer</p>
-
-          Remote . Full-time . $13000 - $175000
+          <h3>Cloudfirst Inc</h3>
+          <p class="job-title">Backend Developer</p>
+      <br>
+          <p>Seattle, WA •Full-time •$140,000 - $190,000</p>
           <br />
-          <button>NOT APPLIED</button>
+          <button class="border border-gray-300 p-1">NOT APPLIED</button>
           <p class="mb-5">
             Build cross-platform mobile applications using React Native. Work on
             products used by millions of users worldwide.
@@ -204,60 +221,14 @@
         </div>
 
         <div class="card-right">
-          <span><i class="fa-regular fa-trash-can"></i></span>
+          <span onclick="deleteJob('card4')"><i class="fa-regular fa-trash-can"></i></span>
         </div>
       </div>
 
-      <!-- card 5  -->
-      <div
-        class="card2 border border-gray-200 p-5 w-11/12 flex justify-between"
-      >
-        <div class="card-left">
-          <h3>Mobile First Corp</h3>
-          <p class="job-title">React Native Developer</p>
+    
+      
 
-          Remote . Full-time . $13000 - $175000
-          <br />
-          <button>NOT APPLIED</button>
-          <p class="mb-5">
-            Build cross-platform mobile applications using React Native. Work on
-            products used by millions of users worldwide.
-          </p>
-
-          <button class="btn btn-outline btn-success mr-3">INTERVIEW</button>
-          <button class="btn btn-outline btn-error">REJECTED</button>
-        </div>
-
-        <div class="card-right">
-          <span><i class="fa-regular fa-trash-can"></i></span>
-        </div>
-      </div>
-
-      <!-- card 6  -->
-      <div
-        class="card2 border border-gray-200 p-5 w-11/12 flex justify-between"
-      >
-        <div class="card-left">
-          <h3>Mobile First Corp</h3>
-          <p class="job-title">React Native Developer</p>
-
-          Remote . Full-time . $13000 - $175000
-          <br />
-          <button>NOT APPLIED</button>
-          <p class="mb-5">
-            Build cross-platform mobile applications using React Native. Work on
-            products used by millions of users worldwide.
-          </p>
-
-          <button class="btn btn-outline btn-success mr-3">INTERVIEW</button>
-          <button class="btn btn-outline btn-error">REJECTED</button>
-        </div>
-
-        <div class="card-right">
-          <span><i class="fa-regular fa-trash-can"></i></span>
-        </div>
-      </div>
-    </section>
+       
 
     <!-- interview tab  -->
     <section id="interview" class="container mx-auto hidden">
@@ -298,21 +269,45 @@
       jobCount.innerText = `${jobs.length} jobs`;
 
       // interview btn
+      // document
+      //   .getElementById("interview-btn")
+      //   .addEventListener("click", function () {
+      //     let interviewSection = document.getElementById("interview");
+      //     interviewSection.innerHTML = `<div
+      //   id="card1"
+      //   class="card1 border border-gray-200 p-5 w-11/12 flex justify-between"
+      // >
+      //   <div class="card-left">
+      //     <h3>Mobile First Corp</h3>
+      //     <p class="job-title">React Native Developer</p>
+
+      //     Remote . Full-time . $13000 - $175000
+      //     <br />
+      //     <button>NOT APPLIED</button>
+      //     <p class="mb-5">
+      //       Build cross-platform mobile applications using React Native. Work on
+      //       products used by millions of users worldwide.
+      //     </p>
+
+      //     <button id="interview-btn" class="btn btn-outline btn-success mr-3">
+      //       INTERVIEW
+      //     </button>
+      //     <button id="rejected-btn" class="btn btn-outline btn-error">
+      //       REJECTED
+      //     </button>
+      //   </div>
+      //   </div>`;
+      //   });
 
       // delete job
-      // const deleteBtn = document
-      //   .getElementById("del")
-      //   .addEventListener("click", function () {
-      //     console.log("btn clicked");
-      //   });
 
       // 1-get parent container
       // let jobBoard = document.getElementById("job-board");
       // let job1 = document.getElementById("card1");
 
-      // document.getElementById("delete").addEventListener("click", function (e) {
-      //   // e.target.parentNode.removeChild(e.target);
-      //   let card = e.target.closest(".card");
+      //  document.getElementsByClassName("del").addEventListener("click", function (e) {
+      // // e.target.parentNode.removeChild(e.target);
+      //  let card = e.target.closest(".card");
       //   card.remove();
       //   totalJobs.innerText = jobs.length--;
       // });
