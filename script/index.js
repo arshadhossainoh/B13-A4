@@ -29,17 +29,30 @@ function deleteJob(id) {
   jobCount.innerText = `${jobs.length} jobs`;
 }
 
-// const delteteBtn = document.getElementById("del");
-// delteteBtn.addEventListener("click", function () {
-//   console.log("btn clicked");
-// });
-
 function addToInterview(id) {
-  let jobPost = document.getElementById(id);
-  let interviewSection = document.getElementById("interview");
-  console.log(jobPost);
+  const jobPost = document.getElementById(id);
+  const interviewSection = document.getElementById("interview");
+  let interviewDiv1 = document.getElementById("interview-div-1");
+  let interviewDiv2 = document.getElementById("interview-div-2");
 
-  interviewSection.innerHTML = `${jobPost.innerHTML} `;
+  interviewDiv1.remove();
+  interviewDiv2.innerHTML = `${jobPost.innerHTML}`;
+  interviewSection.append(interviewDiv2);
 
-  // interviewSection.innerHTML = `<p>${jobPost.innerHTML}</p>`;
+  let statusBtn = document.getElementById("status-btn");
+  statusBtn.innerText = "Interview";
+
+  // let interviewCount = document.getElementById("interview-count");
+  // interviewCount.innerText = 1;
+}
+
+function addToRejected(id) {
+  const jobPost = document.getElementById(id);
+  const rejectedSection = document.getElementById("rejected");
+  let rejectedDiv1 = document.getElementById("rejected-div-1");
+  let rejectedDiv2 = document.getElementById("rejected-div-2");
+
+  rejectedDiv1.remove();
+  rejectedDiv2.innerHTML = `${jobPost.innerHTML}`;
+  rejectedSection.append(rejectedDiv2);
 }

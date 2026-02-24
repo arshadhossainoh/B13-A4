@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job Application Tracker</title>
 
-    <!-- tailwind + daisy -->
+    <!-- tailwind + daisy
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
       type="text/css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+
+    <!-- tailwind  -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- inter font -->
@@ -113,7 +116,9 @@
           <p>Remote . Full-time . $13000 - $175000</p>
 
           <br />
-          <button class="border border-gray-300 p-1">NOT APPLIED</button>
+          <button id="status-btn" class="border border-gray-300 p-1">
+            NOT APPLIED
+          </button>
           <p class="mb-5">
             Build cross-platform mobile applications using React Native. Work on
             products used by millions of users worldwide.
@@ -126,7 +131,11 @@
           >
             INTERVIEW
           </button>
-          <button id="rejected-btn" class="btn btn-outline btn-error">
+          <button
+            id="rejected-btn"
+            class="btn btn-outline btn-error"
+            onclick="addToRejected('card1')"
+          >
             REJECTED
           </button>
         </div>
@@ -149,7 +158,9 @@
           <p>Los Angeles, CA • Part-time • $80,000 - $120,000</p>
 
           <br />
-          <button class="border border-gray-300 p-1">NOT APPLIED</button>
+          <button id="status-btn" class="border border-gray-300 p-1">
+            NOT APPLIED
+          </button>
           <p class="mb-5">
             Create stunning web experiences for high-profile clients. Must have
             portfolio and experience with modern web design trends.
@@ -195,7 +206,9 @@
         </div>
 
         <div class="card-right">
-          <span onclick="deleteJob('card3')"><i class="fa-regular fa-trash-can"></i></span>
+          <span onclick="deleteJob('card3')"
+            ><i class="fa-regular fa-trash-can"></i
+          ></span>
         </div>
       </div>
 
@@ -207,7 +220,7 @@
         <div class="card-left">
           <h3>Cloudfirst Inc</h3>
           <p class="job-title">Backend Developer</p>
-      <br>
+          <br />
           <p>Seattle, WA •Full-time •$140,000 - $190,000</p>
           <br />
           <button class="border border-gray-300 p-1">NOT APPLIED</button>
@@ -221,38 +234,38 @@
         </div>
 
         <div class="card-right">
-          <span onclick="deleteJob('card4')"><i class="fa-regular fa-trash-can"></i></span>
+          <span onclick="deleteJob('card4')"
+            ><i class="fa-regular fa-trash-can"></i
+          ></span>
         </div>
       </div>
-
-    
-      
-
-       
+    </section>
 
     <!-- interview tab  -->
-    <section id="interview" class="container mx-auto hidden">
+    <section id="interview" class="container mx-auto hidden space-y-5">
       <div
+        id="interview-div-1"
         class="w-11/12 p-50 flex flex-col items-center border border-gray-200"
       >
         <img src="./images/jobs.png" alt="" />
         <h3>No jobs available</h3>
         <p>Check back soon for new job opportunites</p>
       </div>
+      <div id="interview-div-2"></div>
     </section>
-    <br />
 
     <!-- rejected tab  -->
     <section id="rejected" class="container mx-auto hidden">
       <div
+        id="rejected-div-1"
         class="w-11/12 p-50 flex flex-col items-center border border-gray-200"
       >
         <img src="./images/jobs.png" alt="" />
         <h3>No jobs available</h3>
-        <p>Check back soon for new job opportunites</p>
+        <p>Check back soon for new job opportunites, this is rejected</p>
       </div>
+      <div id="rejected-div-2"></div>
     </section>
-    <br />
 
     <script>
       let jobs = document.getElementsByClassName("job-title");
@@ -269,35 +282,6 @@
       jobCount.innerText = `${jobs.length} jobs`;
 
       // interview btn
-      // document
-      //   .getElementById("interview-btn")
-      //   .addEventListener("click", function () {
-      //     let interviewSection = document.getElementById("interview");
-      //     interviewSection.innerHTML = `<div
-      //   id="card1"
-      //   class="card1 border border-gray-200 p-5 w-11/12 flex justify-between"
-      // >
-      //   <div class="card-left">
-      //     <h3>Mobile First Corp</h3>
-      //     <p class="job-title">React Native Developer</p>
-
-      //     Remote . Full-time . $13000 - $175000
-      //     <br />
-      //     <button>NOT APPLIED</button>
-      //     <p class="mb-5">
-      //       Build cross-platform mobile applications using React Native. Work on
-      //       products used by millions of users worldwide.
-      //     </p>
-
-      //     <button id="interview-btn" class="btn btn-outline btn-success mr-3">
-      //       INTERVIEW
-      //     </button>
-      //     <button id="rejected-btn" class="btn btn-outline btn-error">
-      //       REJECTED
-      //     </button>
-      //   </div>
-      //   </div>`;
-      //   });
 
       // delete job
 

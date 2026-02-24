@@ -21,8 +21,42 @@
     <!-- we will fill up this container by js  -->
     <div id="container"></div>
 
+    <!-- we can get all elements & their behavior if we add eventlisten to its parent -->
+
+    <div id="delegation">
+      <div>
+        <p id="title-text">My text in delegation</p>
+      </div>
+      <button>clicked</button>
+    </div>
+
     <script>
-      let para = document.querySelectorAll(".text");
+      // if you set delegation on parent whereever in child you click you will get them
+      const delegation = document.getElementById("delegation");
+      delegation.addEventListener("click", function (event) {
+        // console.log(event.target);
+        // console.log(event.target.parentNode);
+
+        // you can catch parent of parent
+        console.log(event.target.parentNode.parentNode);
+      });
+
+      let arr = [1, 2, 3, 4, 5];
+
+      // find - if true return 5 else undefined
+      let findMethod = arr.find((i) => i == 5);
+      // console.log(findMethod);
+
+      // filter - if no match returns [] else return number with how many times
+      // use filter when you want to remove certain number from array
+
+      let removeFive = arr.filter((i) => i != 5);
+      console.log(removeFive);
+
+      // let filterMethod = arr.filter((i) => i == 6);
+      // console.log(filterMethod);
+
+      // let para = document.querySelectorAll(".text");
       // console.log((para[0].innerText = "ok"));
 
       //we are hidding para 1
@@ -31,24 +65,24 @@
       //removing hidden class
       // para[0].classList.remove("hidden");
 
-      let btn = document.getElementById("handle");
-      btn.addEventListener("click", function () {
-        //hiding para 1 upon clicking
-        para[0].classList.add("hidden");
-      });
+      // let btn = document.getElementById("handle");
+      // btn.addEventListener("click", function () {
+      //   //hiding para 1 upon clicking
+      //   para[0].classList.add("hidden");
+      // });
 
-      // filling up the container in html via js
-      let container = document.getElementById("container");
+      // // filling up the container in html via js
+      // let container = document.getElementById("container");
 
-      // creating div
-      let div = document.createElement("div");
+      // // creating div
+      // let div = document.createElement("div");
 
-      // populating div
-      div.innerHTML = `<p>This is a paragraph via JS</p>
-      <button> Click</button>`;
+      // // populating div
+      // div.innerHTML = `<p>This is a paragraph via JS</p>
+      // <button> Click</button>`;
 
-      // appendign child
-      container.appendChild(div);
+      // // appendign child
+      // container.appendChild(div);
     </script>
   </body>
 </html>
