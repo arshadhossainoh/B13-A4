@@ -54,7 +54,9 @@ function toggleStyle(id) {
   if (id == "interview-filter-btn") {
     allJobs.classList.add("hidden");
     filterSection.classList.remove("hidden");
+
     renderInterview();
+    renderEmpty(interviewList);
     jobCount.innerText = `${interviewList.length} jobs`;
   } else if (id == "all-filter-btn") {
     allJobs.classList.remove("hidden");
@@ -64,6 +66,7 @@ function toggleStyle(id) {
     allJobs.classList.add("hidden");
     filterSection.classList.remove("hidden");
     renderRejected();
+    renderEmpty(rejectedList);
     jobCount.innerText = `${rejectedList.length} jobs`;
   }
 }
@@ -249,3 +252,23 @@ function deleteJob(id) {
   total.innerText = allCompanyName.length--;
   jobCount.innerText = `${allCompanyName.length--} jobs`;
 }
+
+function renderEmpty(list) {
+  if (list.length == 0) {
+    let div = document.createElement("div");
+    div.innerHTML = `
+    <div
+        id="interview-div-1"
+        class="w-11/12 p-50 flex flex-col items-center border border-gray-200"
+      >
+        <img src="./images/jobs.png" alt="" />
+        <h3>No jobs available</h3>
+        <p>Check back soon for new job opportunites</p>
+      </div>
+    `;
+    filterSection.append(div);
+    filterSection.classList.remove("hidden");
+  }
+}
+
+console.log(interviewList.length);
