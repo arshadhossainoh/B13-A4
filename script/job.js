@@ -9,6 +9,7 @@ let rejectedCount = document.getElementById("rejected-count");
 let jobCount = document.getElementById("job-count");
 
 const allJobs = document.getElementById("alljobs");
+console.log(allJobs.children.length);
 
 //get hold of main container
 const mainContainer = document.querySelector("main");
@@ -232,6 +233,9 @@ function renderRejected() {
 
 jobCount.innerText = `${allJobs.children.length} jobs`;
 
+let allCompanyName = document.getElementsByClassName("company-name");
+console.log("total company", allCompanyName.length);
+
 // delete job posting
 function deleteJob(id) {
   // const jobBoard = document.getElementById("job-board");
@@ -242,6 +246,6 @@ function deleteJob(id) {
   let jobPost = document.getElementById(id);
   jobPost.innerHTML = "";
   jobPost.style.border = "none";
-  totalJobs.innerText = jobs.length--;
-  jobCount.innerText = `${jobs.length} jobs`;
+  total.innerText = allCompanyName.length--;
+  jobCount.innerText = `${allCompanyName.length--} jobs`;
 }
